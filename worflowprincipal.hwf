@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow>
+  <name>worflowprincipal</name>
+  <name_sync_with_filename>Y</name_sync_with_filename>
+  <description/>
+  <extended_description/>
+  <workflow_version/>
+  <created_user>-</created_user>
+  <created_date>2025/04/12 15:20:33.887</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2025/04/12 15:20:33.887</modified_date>
+  <parameters>
+    </parameters>
+  <actions>
+    <action>
+      <name>Start</name>
+      <description/>
+      <type>SPECIAL</type>
+      <attributes/>
+      <DayOfMonth>1</DayOfMonth>
+      <hour>12</hour>
+      <intervalMinutes>60</intervalMinutes>
+      <intervalSeconds>0</intervalSeconds>
+      <minutes>0</minutes>
+      <repeat>N</repeat>
+      <schedulerType>0</schedulerType>
+      <weekDay>1</weekDay>
+      <parallel>N</parallel>
+      <xloc>16</xloc>
+      <yloc>32</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>workflowstage.hwf</name>
+      <description/>
+      <type>WORKFLOW</type>
+      <attributes/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <create_parent_folder>N</create_parent_folder>
+      <exec_per_row>N</exec_per_row>
+      <filename>${PROJECT_HOME}/workflows/workflowstage.hwf</filename>
+      <loglevel>Nothing</loglevel>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <params_from_previous>N</params_from_previous>
+      <run_configuration>local</run_configuration>
+      <set_append_logfile>N</set_append_logfile>
+      <set_logfile>N</set_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <parallel>N</parallel>
+      <xloc>432</xloc>
+      <yloc>32</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>workflowdimensoes.hwf</name>
+      <description/>
+      <type>WORKFLOW</type>
+      <attributes/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <create_parent_folder>N</create_parent_folder>
+      <exec_per_row>N</exec_per_row>
+      <filename>${PROJECT_HOME}/workflows/workflowdimensoes.hwf</filename>
+      <loglevel>Nothing</loglevel>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <params_from_previous>N</params_from_previous>
+      <run_configuration>local</run_configuration>
+      <set_append_logfile>N</set_append_logfile>
+      <set_logfile>N</set_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <parallel>N</parallel>
+      <xloc>608</xloc>
+      <yloc>32</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>workflowfatos.hwf</name>
+      <description/>
+      <type>WORKFLOW</type>
+      <attributes/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <create_parent_folder>N</create_parent_folder>
+      <exec_per_row>N</exec_per_row>
+      <filename>${PROJECT_HOME}/workflows/workflowfatos.hwf</filename>
+      <loglevel>Nothing</loglevel>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <params_from_previous>N</params_from_previous>
+      <run_configuration>local</run_configuration>
+      <set_append_logfile>N</set_append_logfile>
+      <set_logfile>N</set_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <parallel>N</parallel>
+      <xloc>768</xloc>
+      <yloc>32</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>Success</name>
+      <description/>
+      <type>SUCCESS</type>
+      <attributes/>
+      <parallel>N</parallel>
+      <xloc>1136</xloc>
+      <yloc>32</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>DataIncremental.hpl</name>
+      <description/>
+      <type>PIPELINE</type>
+      <attributes/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <clear_files>N</clear_files>
+      <clear_rows>N</clear_rows>
+      <create_parent_folder>N</create_parent_folder>
+      <exec_per_row>N</exec_per_row>
+      <filename>${PROJECT_HOME}/pipilenes/extras/DataIncremental.hpl</filename>
+      <loglevel>Basic</loglevel>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <params_from_previous>N</params_from_previous>
+      <run_configuration>local</run_configuration>
+      <set_append_logfile>N</set_append_logfile>
+      <set_logfile>N</set_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <parallel>N</parallel>
+      <xloc>288</xloc>
+      <yloc>32</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>Mail - Sucesso</name>
+      <description/>
+      <type>MAIL</type>
+      <attributes/>
+      <server>smtp.gmail.com</server>
+      <port>465</port>
+      <destination>alexdesousapereira2025@gmail.com</destination>
+      <destinationCc/>
+      <destinationBCc/>
+      <replyto>alexdesousapereira2025@gmail.com</replyto>
+      <replytoname>Alex Pereira - Hop</replytoname>
+      <subject>Carga Hop Sucesso</subject>
+      <include_date>Y</include_date>
+      <contact_person/>
+      <contact_phone/>
+      <comment>Carga do Apache Hop Executado com Sucesso</comment>
+      <include_files>N</include_files>
+      <zip_files>N</zip_files>
+      <zip_name/>
+      <use_auth>Y</use_auth>
+      <usexoauth2>N</usexoauth2>
+      <use_secure_auth>Y</use_secure_auth>
+      <auth_user>alexdesousapereira2025@gmail.com</auth_user>
+      <auth_password>Encrypted 727676d7b8c1aa08ded28eaf16b630d988bfc9</auth_password>
+      <only_comment>N</only_comment>
+      <use_HTML>N</use_HTML>
+      <use_Priority>Y</use_Priority>
+      <encoding>UTF-8</encoding>
+      <priority>high</priority>
+      <importance>normal</importance>
+      <sensitivity>normal</sensitivity>
+      <secureconnectiontype>SSL</secureconnectiontype>
+      <replyToAddresses/>
+      <filetypes>      </filetypes>
+      <embeddedimages>
+      </embeddedimages>
+      <parallel>N</parallel>
+      <xloc>1024</xloc>
+      <yloc>32</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>Mail - Erro Stage</name>
+      <description/>
+      <type>MAIL</type>
+      <attributes/>
+      <server>smtp.gmail.com</server>
+      <port>465</port>
+      <destination>alexdesousapereira2025@gmail.com</destination>
+      <destinationCc/>
+      <destinationBCc/>
+      <replyto>alexdesousapereira2025@gmail.com</replyto>
+      <replytoname>Alex Pereira - Hop</replytoname>
+      <subject>Carga Hop Erro na  Stage</subject>
+      <include_date>Y</include_date>
+      <contact_person/>
+      <contact_phone/>
+      <comment>Erro ao executar processo na Stage</comment>
+      <include_files>N</include_files>
+      <zip_files>N</zip_files>
+      <zip_name/>
+      <use_auth>Y</use_auth>
+      <usexoauth2>N</usexoauth2>
+      <use_secure_auth>Y</use_secure_auth>
+      <auth_user>alexdesousapereira2025@gmail.com</auth_user>
+      <auth_password>Encrypted 727676d7b8c1aa08ded28eaf16b630d988bfc9</auth_password>
+      <only_comment>N</only_comment>
+      <use_HTML>N</use_HTML>
+      <use_Priority>Y</use_Priority>
+      <encoding>UTF-8</encoding>
+      <priority>high</priority>
+      <importance>normal</importance>
+      <sensitivity>normal</sensitivity>
+      <secureconnectiontype>SSL</secureconnectiontype>
+      <replyToAddresses/>
+      <filetypes>      </filetypes>
+      <embeddedimages>
+      </embeddedimages>
+      <parallel>N</parallel>
+      <xloc>432</xloc>
+      <yloc>112</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>Mail - Erro Dimensões</name>
+      <description/>
+      <type>MAIL</type>
+      <attributes/>
+      <server>smtp.gmail.com</server>
+      <port>465</port>
+      <destination>alexdesousapereira2025@gmail.com</destination>
+      <destinationCc/>
+      <destinationBCc/>
+      <replyto>alexdesousapereira2025@gmail.com</replyto>
+      <replytoname>Alex Pereira - Hop</replytoname>
+      <subject>Carga Hop Erro Dimensões</subject>
+      <include_date>Y</include_date>
+      <contact_person/>
+      <contact_phone/>
+      <comment>Erro ao executar processo nas Dimensões</comment>
+      <include_files>N</include_files>
+      <zip_files>N</zip_files>
+      <zip_name/>
+      <use_auth>Y</use_auth>
+      <usexoauth2>N</usexoauth2>
+      <use_secure_auth>Y</use_secure_auth>
+      <auth_user>alexdesousapereira2025@gmail.com</auth_user>
+      <auth_password>Encrypted 727676d7b8c1aa08ded28eaf16b630d988bfc9</auth_password>
+      <only_comment>N</only_comment>
+      <use_HTML>N</use_HTML>
+      <use_Priority>Y</use_Priority>
+      <encoding>UTF-8</encoding>
+      <priority>high</priority>
+      <importance>normal</importance>
+      <sensitivity>normal</sensitivity>
+      <secureconnectiontype>SSL</secureconnectiontype>
+      <replyToAddresses/>
+      <filetypes>      </filetypes>
+      <embeddedimages>
+      </embeddedimages>
+      <parallel>N</parallel>
+      <xloc>608</xloc>
+      <yloc>112</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>Mail - Erro Fatos</name>
+      <description/>
+      <type>MAIL</type>
+      <attributes/>
+      <server>smtp.gmail.com</server>
+      <port>465</port>
+      <destination>alexdesousapereira2025@gmail.com</destination>
+      <destinationCc/>
+      <destinationBCc/>
+      <replyto>alexdesousapereira2025@gmail.com</replyto>
+      <replytoname>Alex Pereira - Hop</replytoname>
+      <subject>Carga Hop Erro nas Fatos</subject>
+      <include_date>Y</include_date>
+      <contact_person/>
+      <contact_phone/>
+      <comment>Erro ao executar processo nas Fatos</comment>
+      <include_files>N</include_files>
+      <zip_files>N</zip_files>
+      <zip_name/>
+      <use_auth>Y</use_auth>
+      <usexoauth2>N</usexoauth2>
+      <use_secure_auth>Y</use_secure_auth>
+      <auth_user>alexdesousapereira2025@gmail.com</auth_user>
+      <auth_password>Encrypted 727676d7b8c1aa08ded28eaf16b630d988bfc9</auth_password>
+      <only_comment>N</only_comment>
+      <use_HTML>N</use_HTML>
+      <use_Priority>Y</use_Priority>
+      <encoding>UTF-8</encoding>
+      <priority>high</priority>
+      <importance>normal</importance>
+      <sensitivity>normal</sensitivity>
+      <secureconnectiontype>SSL</secureconnectiontype>
+      <replyToAddresses/>
+      <filetypes>      </filetypes>
+      <embeddedimages>
+      </embeddedimages>
+      <parallel>N</parallel>
+      <xloc>768</xloc>
+      <yloc>112</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>Abort workflow</name>
+      <description/>
+      <type>ABORT</type>
+      <attributes/>
+      <always_log_rows>N</always_log_rows>
+      <parallel>N</parallel>
+      <xloc>608</xloc>
+      <yloc>272</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>API Telegram Inicio</name>
+      <description/>
+      <type>WEBSERVICE_AVAILABLE</type>
+      <attributes/>
+      <connectTimeOut>0</connectTimeOut>
+      <readTimeOut>0</readTimeOut>
+      <url>https://api.telegram.org/bot7029725758:AAEak0gyUBNHaOUYqUWvgTmT-EfvGQLpEhY/sendmessage?chat_id=-4793037091&amp;text=DataWarehouse-Iniciando-Processo</url>
+      <parallel>N</parallel>
+      <xloc>144</xloc>
+      <yloc>32</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>API Telegram Fim</name>
+      <description/>
+      <type>WEBSERVICE_AVAILABLE</type>
+      <attributes/>
+      <connectTimeOut>0</connectTimeOut>
+      <readTimeOut>0</readTimeOut>
+      <url>https://api.telegram.org/bot7029725758:AAEak0gyUBNHaOUYqUWvgTmT-EfvGQLpEhY/sendmessage?chat_id=-4793037091&amp;text=DataWarehouse-Executado-com-Sucesso</url>
+      <parallel>N</parallel>
+      <xloc>896</xloc>
+      <yloc>32</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>API Telegram Erro</name>
+      <description/>
+      <type>WEBSERVICE_AVAILABLE</type>
+      <attributes/>
+      <connectTimeOut>0</connectTimeOut>
+      <readTimeOut>0</readTimeOut>
+      <url>https://api.telegram.org/bot7029725758:AAEak0gyUBNHaOUYqUWvgTmT-EfvGQLpEhY/sendmessage?chat_id=-4793037091&amp;text=DataWarehouse-Erro-Execucao</url>
+      <parallel>N</parallel>
+      <xloc>608</xloc>
+      <yloc>192</yloc>
+      <attributes_hac/>
+    </action>
+  </actions>
+  <hops>
+    <hop>
+      <from>workflowstage.hwf</from>
+      <to>workflowdimensoes.hwf</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>workflowdimensoes.hwf</from>
+      <to>workflowfatos.hwf</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>DataIncremental.hpl</from>
+      <to>workflowstage.hwf</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Mail - Sucesso</from>
+      <to>Success</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>workflowstage.hwf</from>
+      <to>Mail - Erro Stage</to>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>workflowdimensoes.hwf</from>
+      <to>Mail - Erro Dimensões</to>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>workflowfatos.hwf</from>
+      <to>Mail - Erro Fatos</to>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Start</from>
+      <to>API Telegram Inicio</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>API Telegram Inicio</from>
+      <to>DataIncremental.hpl</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>workflowfatos.hwf</from>
+      <to>API Telegram Fim</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>API Telegram Fim</from>
+      <to>Mail - Sucesso</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Mail - Erro Dimensões</from>
+      <to>API Telegram Erro</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>API Telegram Erro</from>
+      <to>Abort workflow</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Mail - Erro Stage</from>
+      <to>API Telegram Erro</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Mail - Erro Fatos</from>
+      <to>API Telegram Erro</to>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+  </hops>
+  <notepads>
+  </notepads>
+  <attributes/>
+</workflow>
