@@ -4,7 +4,7 @@
 
 Este projeto faz parte do curso de Apache Hop com foco na construção de pipelines ETL utilizando planilhas Excel e banco de dados PostgreSQL como fontes de dados, e modelagem dos dados em um banco relacional SQL Server em formato dimensional com dados de Vendas.
 
-![Projeto](midia\Projeto.png)
+![Projeto](midia/Projeto.png)
 
 Durante o curso, o aluno aprenderá a:
 
